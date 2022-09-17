@@ -39,3 +39,4 @@ fi
 
 docker build -t fabrizio2210/docker_light-hugo:${arch} -f docker/${arch}/Dockerfile .
 docker push fabrizio2210/docker_light-hugo:${arch}
+
