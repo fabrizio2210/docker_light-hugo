@@ -10,6 +10,6 @@ RUN TEMP_DEB="$(mktemp)" && \
     dpkg -i "$TEMP_DEB" && \
     rm -rf "$TEMP_DEB"
 
-RUN add-apt-repository ppa:rmescandon/yq && \
+RUN add-apt-repository "deb http://ppa.launchpad.net/rmescandon/yq/ubuntu $(lsb_release -sc) main" && \
     apt update && \
     apt install yq -y
