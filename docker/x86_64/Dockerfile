@@ -2,7 +2,7 @@ FROM fabrizio2210/docker_light-default_container
 
 
 RUN apt-get update && \
-    apt-get install -y wget nfs-common cifs-utils \
+    apt-get install -y wget nfs-common cifs-utils software-properties-common\
     && apt-get clean
 
 RUN TEMP_DEB="$(mktemp)" && \
@@ -11,5 +11,5 @@ RUN TEMP_DEB="$(mktemp)" && \
     rm -rf "$TEMP_DEB"
 
 RUN add-apt-repository ppa:rmescandon/yq && \
-    apt updae && \
+    apt update && \
     apt install yq -y
