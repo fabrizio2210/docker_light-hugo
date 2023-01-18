@@ -10,3 +10,6 @@ RUN TEMP_DEB="$(mktemp)" && \
     dpkg -i "$TEMP_DEB" && \
     rm -rf "$TEMP_DEB"
 
+RUN add-apt-repository ppa:rmescandon/yq && \
+    apt updae && \
+    apt install yq -y
