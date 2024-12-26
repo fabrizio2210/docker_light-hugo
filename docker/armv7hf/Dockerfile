@@ -2,7 +2,7 @@ FROM fabrizio2210/docker_light-default_container
 
 
 RUN apt-get update && \
-    apt-get install -y wget nfs-common cifs-utils \
+    apt-get install -y wget nfs-common cifs-utils lftp \
     && apt-get clean
 
 RUN TEMP_DEB="$(mktemp)" && \
