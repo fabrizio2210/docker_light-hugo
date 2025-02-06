@@ -6,7 +6,7 @@ RUN apt-get update && \
     && apt-get clean
 
 RUN TEMP_DEB="$(mktemp)" && \
-    wget -O "$TEMP_DEB" 'https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_0.101.0_Linux-64bit.deb' && \
+    wget -O "$TEMP_DEB" 'https://github.com/gohugoio/hugo/releases/download/v0.143.1/hugo_0.143.1_linux-amd64.deb' && \
     dpkg -i "$TEMP_DEB" && \
     rm -rf "$TEMP_DEB"
 
